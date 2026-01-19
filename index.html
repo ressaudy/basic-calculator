@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Kalkulator Basic</title>
+	<style>
+		/* small safe fallback for fonts */
+		:root{font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+	</style>
+</head>
+<body>
+	<main class="main-display">
+		<button id="openCalc" class="open-btn">Buka Kalkulator</button>
+
+		<!-- Modal / Popup -->
+		<div id="calcModal" class="modal" aria-hidden="true">
+			<div class="modal-content" role="dialog" aria-label="Kalkulator">
+				<header class="calc-header">
+					<h2>Kalkulator</h2>
+					<button id="closeCalc" class="close-btn">✕</button>
+				</header>
+
+				<div class="calculator">
+					<input type="text" id="display" class="display" readonly>
+					<div class="keys">
+						<button class="btn func" data-action="clear">C</button>
+						<button class="btn func" data-action="back">⌫</button>
+						<button class="btn op" data-value="/">÷</button>
+						<button class="btn op" data-value="*">×</button>
+
+						<button class="btn num" data-value="7">7</button>
+						<button class="btn num" data-value="8">8</button>
+						<button class="btn num" data-value="9">9</button>
+						<button class="btn op" data-value="-">−</button>
+
+						<button class="btn num" data-value="4">4</button>
+						<button class="btn num" data-value="5">5</button>
+						<button class="btn num" data-value="6">6</button>
+						<button class="btn op" data-value="+">+</button>
+
+						<button class="btn num" data-value="1">1</button>
+						<button class="btn num" data-value="2">2</button>
+						<button class="btn num" data-value="3">3</button>
+						<button class="btn equals" data-action="equals">=</button>
+
+						<button class="btn zero num" data-value="0">0</button>
+						<button class="btn num" data-value=".">.</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
